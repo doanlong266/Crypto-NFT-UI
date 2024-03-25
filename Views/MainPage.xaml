@@ -1,58 +1,64 @@
-<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:toolkit="clr-namespace:CommunityToolkit.Maui.Behaviors;assembly=CommunityToolkit.Maui"
+             Shell.NavBarIsVisible="False"
+             NavigationPage.HasNavigationBar="False"
              x:Class="Crypto_NFT_UI.Views.MainPage">
     <ContentPage.Behaviors>
-        <toolkit:StatusBarBehavior StatusBarColor="{StaticResource Background}" StatusBarStyle="DarkContent" />
+        <toolkit:StatusBarBehavior StatusBarColor="{StaticResource Background}" StatusBarStyle="DarkContent"  />
     </ContentPage.Behaviors>
+    <Grid>
+        <Image Source="background1.png" Aspect="AspectFill" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"/>
+        <BoxView Color="{StaticResource Background}" Opacity="0.5" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"/>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
 
-    <Grid BackgroundColor="{StaticResource Background}">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="Auto"/>
-        </Grid.RowDefinitions>
+            <StackLayout Grid.Row="0" >
+                <VerticalStackLayout>
+                    <StackLayout Orientation="Horizontal" Margin="20,40,0,0">
+                        <Button WidthRequest="62" HeightRequest="40"  Text="Skip" FontFamily="DB" TextColor="{x:StaticResource Text}"  Clicked="navigation" BackgroundColor="{StaticResource White}" CornerRadius="90"/>
+                        <Image Source="pagination.png" HeightRequest="5" HorizontalOptions="EndAndExpand" Margin="0,0,20,0"/>
+                    </StackLayout>
+                    <StackLayout >
+                        <Image Source="onboarding.svg" Aspect="AspectFill" HeightRequest="400"/>
+                    </StackLayout>
+                    <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                        <Label FontFamily="DB" Text="The new NFT" HorizontalOptions="CenterAndExpand" FontSize="30" TextColor="#23262F">
+                            <Label.Shadow>
+                                <Shadow Brush="{x:StaticResource Text}" Offset="0,5" Opacity="0.5"/>
+                            </Label.Shadow>
+                        </Label>
+                        <Label FontFamily="DB" Text="marketplace" HorizontalOptions="CenterAndExpand" FontSize="30" TextColor="#23262F">
+                            <Label.Shadow>
+                                <Shadow Brush="{x:StaticResource Text}" Offset="0,5" Opacity="0.5"/>
+                            </Label.Shadow>
+                        </Label>
+                    </StackLayout>
+                    <StackLayout Margin="0,10,0,0">
+                        <Label FontFamily="PR" Text="Node is a platform that aims to build a " HorizontalOptions="CenterAndExpand" FontSize="14" TextColor="#23262F"/>
+                        <Label FontFamily="PR" Text="new creative economy." HorizontalOptions="CenterAndExpand" FontSize="14" TextColor="#23262F"/>
+                    </StackLayout>
+                </VerticalStackLayout>
+            </StackLayout>
+            <StackLayout Grid.Row="2" Margin="0,0,0,40">
+                <Frame HorizontalOptions="CenterAndExpand" HeightRequest="64" WidthRequest="154" CornerRadius="16" BorderColor="{x:StaticResource White}">
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="{x:StaticResource left}" TextColor="#B1B5C3" FontFamily="FAS" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand">
+                        </Label>
+                        <BoxView WidthRequest="1" BackgroundColor="#E6E8EC"/>
+                        <Label Text="{x:StaticResource right}" FontFamily="FAS" HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand">
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="navigation"/>
+                            </Label.GestureRecognizers>
+                        </Label>
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
 
-        <!-- Content area -->
-        <StackLayout Grid.Row="1" BackgroundColor="{StaticResource Background}">
-            <!-- Your existing content here -->
-            <VerticalStackLayout>
-                <StackLayout Orientation="Horizontal" Margin="20,40,0,0">
-                    <Button WidthRequest="62" HeightRequest="40"  Text="Skip" FontFamily="DB" TextColor="{x:StaticResource Text}" BackgroundColor="{StaticResource White}" CornerRadius="90"/>
-                    <Image Source="pagination.png" HeightRequest="5" HorizontalOptions="EndAndExpand" Margin="0,0,20,0"/>
-                </StackLayout>
-                <StackLayout >
-                    <Image Source="onboarding.svg" Aspect="AspectFill" HeightRequest="400"/>
-                </StackLayout>
-                <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
-                    <Label FontFamily="DB" Text="The new NFT" HorizontalOptions="CenterAndExpand" FontSize="30" TextColor="#23262F">
-                        <Label.Shadow>
-                            <Shadow Brush="{x:StaticResource Text}" Offset="0,5" Opacity="0.5"/>
-                        </Label.Shadow>
-                    </Label>
-                    <Label FontFamily="DB" Text="marketplace" HorizontalOptions="CenterAndExpand" FontSize="30" TextColor="#23262F">
-                        <Label.Shadow>
-                            <Shadow Brush="{x:StaticResource Text}" Offset="0,5" Opacity="0.5"/>
-                        </Label.Shadow>
-                    </Label>
-                </StackLayout>
-                <StackLayout Margin="0,10,0,0">
-                    <Label FontFamily="PR" Text="Node is a platform that aims to build a " HorizontalOptions="CenterAndExpand" FontSize="14" TextColor="#23262F"/>
-                    <Label FontFamily="PR" Text="new creative economy." HorizontalOptions="CenterAndExpand" FontSize="14" TextColor="#23262F"/>
-                </StackLayout>
-            </VerticalStackLayout>
-        </StackLayout>
-
-        <!-- Button at the bottom -->
-        <StackLayout Grid.Row="2" Margin="0,0,0,40">
-            <Frame HorizontalOptions="CenterAndExpand" HeightRequest="64" WidthRequest="154" CornerRadius="16">
-                <StackLayout Orientation="Horizontal">
-                    <Label Text="{x:StaticResource left}" TextColor="#B1B5C3" FontFamily="FAS" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand"/>
-                    <BoxView WidthRequest="1" BackgroundColor="#E6E8EC"/>
-                    <Label Text="{x:StaticResource right}" FontFamily="FAS" HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand"/>
-                </StackLayout>
-            </Frame>
-        </StackLayout>
+        </Grid>
     </Grid>
 </ContentPage>

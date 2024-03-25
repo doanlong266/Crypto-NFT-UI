@@ -7,7 +7,7 @@ namespace Crypto_NFT_UI
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new NavigationPage(new MainPage());
         }
     }
 }
