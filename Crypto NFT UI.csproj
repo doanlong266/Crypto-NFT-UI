@@ -56,6 +56,13 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="Resources\Fonts\DMSans-Bold.ttf" />
+	  <None Remove="Resources\Fonts\fa-brand.ttf" />
+	  <None Remove="Resources\Fonts\fa-duotone-900.ttf" />
+	  <None Remove="Resources\Fonts\fa-light-300.ttf" />
+	  <None Remove="Resources\Fonts\fa-regular.ttf" />
+	  <None Remove="Resources\Fonts\fa-solid.ttf" />
+	  <None Remove="Resources\Fonts\fa-thin-100.ttf" />
 	  <None Remove="Resources\Fonts\Poppins-Bold.ttf" />
 	  <None Remove="Resources\Fonts\Poppins-Italic.ttf" />
 	  <None Remove="Resources\Fonts\Poppins-Light.ttf" />
@@ -64,6 +71,8 @@
 	  <None Remove="Resources\Fonts\Poppins-SemiBold.ttf" />
 	  <None Remove="Resources\Fonts\Poppins-Thin.ttf" />
 	  <None Remove="Resources\Images\background.svg" />
+	  <None Remove="Resources\Images\onboarding.svg" />
+	  <None Remove="Resources\Images\pagination.png" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -71,6 +80,12 @@
 		<PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="8.0.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiXaml Update="Views\MainPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	</ItemGroup>
 
 </Project>
