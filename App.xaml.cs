@@ -1,4 +1,5 @@
-﻿namespace Crypto_NFT_UI
+﻿using Crypto_NFT_UI.Views;
+namespace Crypto_NFT_UI
 {
     public partial class App : Application
     {

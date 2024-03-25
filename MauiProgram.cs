@@ -20,6 +20,14 @@ namespace Crypto_NFT_UI
                     fonts.AddFont("Poppins-Regular.ttf", "PR");
                     fonts.AddFont("Poppins-SemiBold.ttf", "PS");
                     fonts.AddFont("Poppins-Thin.ttf", "PT");
+                    fonts.AddFont("DMSans-Bold.ttf", "DB");
+                    fonts.AddFont("fa-brand.ttf", "FAB");
+                    fonts.AddFont("fa-duotone-900.ttf", "FAD");
+                    fonts.AddFont("fa-light-300.ttf", "FAL");
+                    fonts.AddFont("fa-regular.ttf", "FAR");
+                    fonts.AddFont("fa-solid.ttf", "FAS");
+                    fonts.AddFont("fa-thin-100.ttf", "FAT");
+                    
                 });
 
 #if DEBUG
