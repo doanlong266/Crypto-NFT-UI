@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using CommunityToolkit.Maui;
+using Microsoft.Extensions.Logging;
 
 namespace Crypto_NFT_UI
 {
@@ -9,10 +10,16 @@ namespace Crypto_NFT_UI
             var builder = MauiApp.CreateBuilder();
             builder
                 .UseMauiApp<App>()
+                .UseMauiCommunityToolkit()
                 .ConfigureFonts(fonts =>
                 {
-                    fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-                    fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
+                    fonts.AddFont("Poppins-Bold.ttf", "PB");
+                    fonts.AddFont("Poppins-Italic.ttf", "PI");
+                    fonts.AddFont("Poppins-Light.ttf", "PL");
+                    fonts.AddFont("Poppins-Medium.ttf", "PM");
+                    fonts.AddFont("Poppins-Regular.ttf", "PR");
+                    fonts.AddFont("Poppins-SemiBold.ttf", "PS");
+                    fonts.AddFont("Poppins-Thin.ttf", "PT");
                 });
 
 #if DEBUG
@@ -22,4 +29,5 @@ namespace Crypto_NFT_UI
             return builder.Build();
         }
     }
+
 }
