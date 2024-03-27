@@ -425,5 +425,6 @@
 
     <x:String x:Key="right">&#xf178;</x:String>
     <x:String x:Key="left">&#xf177;</x:String>
-
+    <x:String x:Key="left-2">&#xf104;</x:String>
+    <x:String x:Key="right-2">&#xf105;</x:String>
 </ResourceDictionary>

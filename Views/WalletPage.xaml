@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+              xmlns:toolkit="clr-namespace:CommunityToolkit.Maui.Behaviors;assembly=CommunityToolkit.Maui"
+             x:Class="Crypto_NFT_UI.Views.WalletPage"
+             Shell.NavBarIsVisible="False"
+             NavigationPage.HasNavigationBar="False"
+             Title="WalletPage">
+    <ContentPage.Behaviors>
+        <toolkit:StatusBarBehavior StatusBarColor="#dad4f7" StatusBarStyle="DarkContent"  />
+    </ContentPage.Behaviors>
+    <Grid BackgroundColor="#F4F5F6">
+        <Image Source="background2.png" Aspect="AspectFill" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"/>
+        <Image Source="background3.png" Aspect="AspectFill" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"/>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <StackLayout Grid.Row="0" >
+                <VerticalStackLayout>
+                    <StackLayout Orientation="Horizontal" Margin="24,40,0,0">
+                        <StackLayout Orientation="Horizontal"  HorizontalOptions="StartAndExpand">
+                            <Image Source="left.svg"  HeightRequest="32" WidthRequest="32">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="back"/>
+                                </Image.GestureRecognizers>
+                            </Image>
+                            <Label Margin="16,0,0,0" Text="Connect wallet"  FontSize="24" FontFamily="PS" />
+                        </StackLayout>
+                        <Image Source="bar.svg" HorizontalOptions="EndAndExpand" Margin="0,0,24,0" HeightRequest="32" WidthRequest="32"/>
+                    </StackLayout>
+                    <StackLayout >
+                        <Image Source="wallet.svg" Aspect="AspectFill" HeightRequest="350"/>
+                    </StackLayout>
+                </VerticalStackLayout>
+            </StackLayout>
+            <StackLayout Grid.Row="2" Margin="0,0,0,20">
+                <Grid>
+                    <Frame WidthRequest="327" HeightRequest="378" CornerRadius="32" BorderColor="{x:StaticResource White}" >
+                        <StackLayout>
+                            <Label HorizontalOptions="Center" Text="Choose your wallet" FontFamily="PM" FontSize="16" TextColor="{x:StaticResource Text}"/>
+                            <Label HorizontalOptions="Center" Text="By connecting your wallet, you agree to our"  FontFamily="PM" FontSize="12" TextColor="#777e90"/>
+                            <Label HorizontalOptions="Center">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="Terms of Service " FontFamily="PB" FontSize="13" TextColor="{x:StaticResource Text}" />
+                                        <Span Text="and our"  FontFamily="PM" FontSize="12" TextColor="#777e90"/>
+                                        <Span Text=" Privacy Policy." FontFamily="PB" FontSize="13" TextColor="{x:StaticResource Text}" />
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                                <StackLayout Margin="24" Orientation="Horizontal">
+                                    <StackLayout HorizontalOptions="StartAndExpand" Orientation="Horizontal">
+                                        <Image Source="rainbow.svg"/>
+                                        <Label FontFamily="PS" FontSize="18" Margin="20,0,0,0" Text="Rainbow" VerticalOptions="Center"/>
+                                    </StackLayout>
+                                    <Label HorizontalOptions="EndAndExpand" Text="{x:StaticResource right-2}" FontFamily="FAS" VerticalOptions="Center" FontSize="12"/>
+                                <StackLayout.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="home"/>
+                                </StackLayout.GestureRecognizers>
+                                </StackLayout>
+                                
+                                <StackLayout Margin="24" Orientation="Horizontal">
+                                    <StackLayout HorizontalOptions="StartAndExpand" Orientation="Horizontal">
+                                        <Image Source="coinbase.svg"/>
+                                        <Label FontFamily="PS" FontSize="18" Margin="20,0,0,0" Text="Coinbase" VerticalOptions="Center"/>
+                                    </StackLayout>
+                                    <Label HorizontalOptions="EndAndExpand" Text="{x:StaticResource right-2}" FontFamily="FAS" VerticalOptions="Center" FontSize="12"/>
+                                <StackLayout.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="home"/>
+                                </StackLayout.GestureRecognizers>
+                            </StackLayout>
+                                <StackLayout Margin="24" Orientation="Horizontal">
+                                    <StackLayout HorizontalOptions="StartAndExpand" Orientation="Horizontal">
+                                        <Image Source="metamask.svg"/>
+                                        <Label FontFamily="PS" FontSize="18" Margin="20,0,0,0" Text="Metamask" VerticalOptions="Center"/>
+                                    </StackLayout>
+                                    <Label HorizontalOptions="EndAndExpand" Text="{x:StaticResource right-2}" FontFamily="FAS" VerticalOptions="Center" FontSize="12"/>
+                                <StackLayout.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="home"/>
+                                </StackLayout.GestureRecognizers>
+                            </StackLayout>
+                        </StackLayout>
+                    </Frame>
+                </Grid>
+            </StackLayout>
+        </Grid>
+    </Grid>
+</ContentPage>

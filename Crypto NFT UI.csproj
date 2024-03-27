@@ -71,8 +71,16 @@
 	  <None Remove="Resources\Fonts\Poppins-SemiBold.ttf" />
 	  <None Remove="Resources\Fonts\Poppins-Thin.ttf" />
 	  <None Remove="Resources\Images\background1.png" />
+	  <None Remove="Resources\Images\background2.png" />
+	  <None Remove="Resources\Images\background3.png" />
+	  <None Remove="Resources\Images\bar.svg" />
+	  <None Remove="Resources\Images\coinbase.svg" />
+	  <None Remove="Resources\Images\left.png" />
+	  <None Remove="Resources\Images\metamask.svg" />
 	  <None Remove="Resources\Images\onboarding.svg" />
 	  <None Remove="Resources\Images\pagination.png" />
+	  <None Remove="Resources\Images\rainbow.svg" />
+	  <None Remove="Resources\Images\wallet.svg" />
 	</ItemGroup>
 
 	<ItemGroup>

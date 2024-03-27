@@ -7,9 +7,8 @@
     <ContentPage.Behaviors>
         <toolkit:StatusBarBehavior StatusBarColor="{StaticResource Background}" StatusBarStyle="DarkContent"  />
     </ContentPage.Behaviors>
-    <Grid>
+    <Grid  BackgroundColor="{StaticResource Background}">
         <Image Source="background1.png" Aspect="AspectFill" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"/>
-        <BoxView Color="{StaticResource Background}" Opacity="0.5" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"/>
         <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
@@ -58,7 +57,6 @@
                     </StackLayout>
                 </Frame>
             </StackLayout>
-
         </Grid>
     </Grid>
 </ContentPage>
